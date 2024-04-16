@@ -1,0 +1,10 @@
+/* STEP 2: Style the SVG and the child elements directly using fill, stroke, and stroke-width  */
+#rect {
+    fill: rgb(85, 43, 157);
+    stroke: rgb(250, 250, 250);
+}
+
+#circle {
+    fill: rgb(38, 104, 106);
+    stroke: rgb(255, 215, 0);
+}

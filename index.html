@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Week13: Online Exercise 13</title>
+    <!-- moving css to an externam file for better code practise -->
+    <link rel="stylesheet" href="css/css.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- STEP 3: Attach the Velocity library to animate SVG with ease   -->
+    <script src="./js/velocity.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // <!-- STEP 4: use the velocity method to animate the SVG elements-->
+
+        animateRect($("#rect"));
+        animateCircle($("#circle"));
+
+        // animating the rectangle
+        function animateRect($rect) {
+          $rect.velocity(
+            {
+              y: "+=400",
+            },
+            {
+              duration: 1000,
+              loop: true,
+            }
+          );
+        }
+
+        // aniating the circle
+        function animateCircle($circle) {
+          $circle.velocity(
+            {
+              cx: "+=500",
+              cy: "+=300",
+            },
+            {
+              duration: 1000,
+              loop: true,
+            }
+          );
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <!-- STEP 1: Build out an SVG element or two (a circle and rect are good here) -->
+    <svg width="1000" height="850">
+      <!-- creating two element circle and rectangle  -->
+      <rect id="rect" x="200" y="400" width="100" height="100" />
+
+      <circle id="circle" cx="300" cy="300" r="90" />
+    </svg>
+  </body>
+</html>
